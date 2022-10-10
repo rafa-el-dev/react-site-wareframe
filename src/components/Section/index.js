@@ -1,11 +1,11 @@
 import Container from "../Container"
 
-function Section(props) {
+function Section({ id, className, style, children }) {
   
   return (
-    <section className="section">
+    <section id={id} className={`section ${className || ''}`} style={style}>
       <Container>
-        {props.children}
+        {children}
       </Container>
     </section>
   )
